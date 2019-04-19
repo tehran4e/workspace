@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    {% for movie in movies %}
+        <div class="MovieName">
+            <a href="{% url 'mdetail' movie.id %}">
+            <h3>{{ movie.title|capfirst }}</h3>
+            </a>
+            <p>{{ movie.year }}</p>
+            <p>{{ movie.director }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

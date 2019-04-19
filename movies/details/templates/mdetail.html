@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="details">
+    <div class="image"><img src="../../static/images/posters/{{movie.title}}.jpg" alt="{{movie.title}}" width="220" height="326"></div>
+    <h3>{{movie.title|capfirst}}</h3>
+    <p><span class="box">director:</span><span class="left">{{movie.director}}</span></p>
+    <p><span class="box">year:</span><span class="left">{{movie.year}}</span></p>
+    <p><span class="storyb">story:</span><span class="story">{{movie.story}}</span></p>
+    <img src="../../static/images/artists/{{movie.artistsName}}.jpg" alt="movie.artistsName">
+    <p>{{artistsName}}</p>
+</div>
+{% endblock %}
